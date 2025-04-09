@@ -1,0 +1,157 @@
+/* General styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif, 'Roboto', sans-serif; /* Added Roboto as fallback */
+    line-height: 1.6;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0.9), rgba(243, 244, 246, 0.9)),
+                url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTptfcoqpVpwRJy47Yd1KgyQOQVR4UOMnCOzs45F3QqBdJa6VnOUTg4IPdABIKg0Csr6sQ&usqp=CAU') center/cover no-repeat fixed;
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Navbar Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+}
+
+/* Black background and white text when scrolled */
+.navbar.scrolled {
+    background-color: #395A19;
+}
+
+.navbar.scrolled .app-name,
+.navbar.scrolled .nav-links a,
+.navbar.scrolled .login a {
+    color: white;
+}
+
+.navbar .app-name {
+    font-size: 28px;
+    font-weight: 600;
+    color: #57793A;
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 35px;
+}
+
+.nav-links a {
+    color: #333;
+    font-size: 18px;
+    font-weight: 700;
+    position: relative;
+}
+
+.nav-links a:hover {
+    color: #64D007;
+}
+
+.nav-links a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #57793A;
+    transition: width 0.3s;
+    margin: auto;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.login a {
+    color: #333;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 8px 20px;
+    border: 2px solid #57793A;
+    border-radius: 5px;
+    background: transparent;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.login a:hover {
+    background-color: #64D007;
+    color: white;
+    border: 2px solid #64D007;
+}
+/* Footer Section Styles */
+.footer {
+    background-color: #395A19;
+    color: white;
+    padding: 40px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.footer-left {
+    width: 20%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: #0DF146;
+}
+
+.footer-left p {
+    font-size: 28px;
+    font-weight: 600;
+    color: #fff;
+    letter-spacing: 1px;
+}
+
+.footer-right {
+    width: 75%;
+    display: flex;
+    justify-content: flex-end;
+    gap: 120px;
+}
+
+.footer-section h4 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.footer-section ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.footer-section ul li {
+    margin: 5px 0;
+}
+
+.footer-section ul li a {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: #64D007;
+}

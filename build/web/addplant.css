@@ -1,0 +1,213 @@
+  /* General Styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Modal Styling */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            width: 500px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            position: relative;
+            text-align: center;
+        }
+
+        .close {
+            color: #aaa;
+            font-size: 24px;
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            cursor: pointer;
+        }
+
+        .close:hover {
+            color: black;
+        }
+
+        /* Form Styling */
+        #form-step-1, #form-step-2 {
+            display: none;
+        }
+
+        #form-step-1.active, #form-step-2.active {
+            display: block;
+        }
+
+        input[type="text"], input[type="date"], input[type="number"], select {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            background-color: #5cb85c;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #4cae4c;
+        }
+
+        /* Reminder Box Styling */
+        .reminder-box {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 15px;
+            background-color: #fff;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            margin-left: 20px;
+            cursor: pointer;
+            width: 90%; /* Same width as Enter Plant Name */
+        }
+
+        .reminder-box .bell-icon {
+            font-size: 20px;
+            color: #5cb85c;
+            margin-right: 10px;
+        }
+
+        .reminder-box .reminder-details {
+            text-align: left;
+        }
+
+        .reminder-box h3 {
+            margin: 0;
+            font-size: 18px;
+            color: #5cb85c;
+        }
+
+        .reminder-box p {
+            margin: 0;
+            font-size: 14px;
+        }
+
+        /* Card Container */
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        
+        /* Add Reminder Button */
+.add-reminder-btn {
+    position:relative;;
+    top: 100px; /* Distance from the bottom of the viewport */
+    margin-left:83rem; /* Distance from the right side of the viewport */
+    background-color: #4caf50; /* Green button color */
+    color: white;
+    border: none;
+    padding: 17px 17px;
+    border-radius: 7px;
+    font-size: 18px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    z-index: 1000; /* Ensures the button is above all other elements */
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.add-reminder-btn:hover {
+    background-color: #45a049; /* Slightly darker green on hover */
+    transform: scale(1.1); /* Button enlarges slightly */
+}
+
+/* Card Styling */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin: 120px 20px 20px 20px; /* Adjusted to avoid overlap */
+}
+
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    background-color: #f9f9f9;
+    position: relative;
+}
+
+
+.card h3 {
+    font-size: 20px;
+    margin: 0;
+    color: #333;
+}
+
+/* Task Box Styling */
+.task-box {
+    background-color: #f0f9f4;
+    padding: 15px;
+    border-radius: 8px;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.task-logo {
+    font-size: 25px;
+}
+
+.task-details p {
+    margin: 5px 0;
+    color: #555;
+}
+
+.divider {
+    height: 2px;
+    background-color: #ddd;
+    margin-top: 10px;
+}
+ .delete-btn {
+            display: inline-block;
+            padding: 5px 10px;
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 2px;
+        }
+
+        .delete-btn:hover {
+            background-color: red;
+        }
+  

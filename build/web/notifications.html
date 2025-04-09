@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant Reminder App</title>
+    <style>
+        /* Modal Styles */
+        #popup {
+            display: none; /* Hidden by default */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .popup-content {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .popup-content h2 {
+            margin-bottom: 20px;
+        }
+
+        .popup-content p {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        .popup-content button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .popup-content button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Plant Reminder App</h1>
+    
+    <!-- Pop-up Modal -->
+    <div id="popup">
+        <div class="popup-content">
+            <h2>Reminder!</h2>
+            <p id="reminderMessage">You have a reminder!</p>
+            <button onclick="closePopup()">Got it!</button>
+        </div>
+    </div>
+
+    <!-- Audio for notification sound -->
+    <audio id="notificationSound" src="https://www.soundjay.com/button/beep-07.wav" preload="auto"></audio>
+
+    <script>
+        // Function to check reminders from the server
+        function checkReminders() {
+            fetch('GetReminderServlet')
+                .then(response => response.json())
+                .then(data => {
+                    if (data.status === "success") {
+                        data.reminders.forEach(reminder => {
+                            showPopup(reminder);  // Show popup for each reminder
+                            playSound();          // Play the notification sound
+                        });
+                    } else {
+                        console.error("Error fetching reminders");
+                    }
+                })
+                .catch(error => console.error('Error:', error));
+        }
+
+        // Function to display the pop-up
+        function showPopup(message) {
+            const popup = document.getElementById('popup');
+            const reminderMessage = document.getElementById('reminderMessage');
+            reminderMessage.textContent = message; // Set the reminder message
+            popup.style.display = 'flex'; // Show the popup
+        }
+
+        // Function to close the pop-up
+        function closePopup() {
+            const popup = document.getElementById('popup');
+            popup.style.display = 'none'; // Hide the popup
+        }
+
+        // Function to play the notification sound
+        function playSound() {
+            const sound = document.getElementById('notificationSound');
+            sound.play(); // Play the sound
+        }
+
+        // Check reminders every minute
+        setInterval(checkReminders, 60000); // Check every minute
+    </script>
+</body>
+</html>
