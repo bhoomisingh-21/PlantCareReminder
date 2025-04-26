@@ -5,8 +5,11 @@ The Plant Care Reminder App helps users manage their plants by setting custom re
 
 ## Technologies Used
 Frontend: HTML, CSS, JavaScript
+
 Backend: Java Servlets
+
 Database: Oracle Database
+
 Data Format: JSON
 
 ## Features
