@@ -14,17 +14,23 @@ Data Format: JSON
 
 ## Features
 Create Plant Profiles: Users can add new plants with details like name, species, and care requirements.
+
 Custom Reminders: Users can set specific times for watering and fertilizing each plant.
+
 Reminders: The app sends reminders to the user based on the set schedule for each plant.
 
 ## Future Enhancements
 User Authentication: Login and signup features will be added soon for personalized user experience.
+
 Reminder System: The reminder functionality will be fully developed to notify users based on their custom schedules.
 
 ## How to Run
 Clone the repository to your local machine.
+
 Set up an Oracle Database and configure the connection in the backend.
+
 Run the Java servlet application.
+
 Open the app in your browser to start adding plants and setting reminders.
 
 ## Note
