@@ -12,6 +12,10 @@ Database: Oracle Database
 
 Data Format: JSON
 
+src/ - Contains Java files (Servlets, logic).
+
+web/ - Contains HTML, CSS, JS files.
+
 ## Features
 Create Plant Profiles: Users can add new plants with details like name, species, and care requirements.
 
